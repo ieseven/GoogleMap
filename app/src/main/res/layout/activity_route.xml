@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_route"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff7f7f7"
+    tools:context="com.daodao.map.activity.RouteActivity">
+
+    <fragment
+        android:id="@+id/map_route"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/act_route_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/btn_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/act_route_tab_car"
+                    android:layout_width="74dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/tab_car_hl" />
+
+                    <View
+                        android:id="@+id/act_route_tab_car_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_gravity="bottom"
+                        android:background="#1f63ba" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/act_route_tab_run"
+                    android:layout_width="74dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/tab_run_hl" />
+
+                    <View
+                        android:id="@+id/act_route_tab_run_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_gravity="bottom"
+                        android:background="#1f63ba"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/act_route_tab_bus"
+                    android:layout_width="74dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/tab_bus_hl" />
+
+                    <View
+                        android:id="@+id/act_route_tab_bus_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_gravity="bottom"
+                        android:background="#1f63ba"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ffdddddd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#fff7f7f7"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffdddddd"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/act_route_exchange_start_end_point"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/btn_change"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="Start"/>
+                        <EditText
+                            android:id="@+id/act_route_start_point"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:imeOptions="actionSearch"
+                            android:textColorHint="@color/color_cccccc"
+                            android:textSize="16sp"
+                            android:hint="Start Address"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#ffdddddd"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="End"/>
+                        <EditText
+                            android:id="@+id/act_route_end_point"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:inputType="text"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/color_cccccc"
+                            android:textSize="16sp"
+                            android:imeOptions="actionSearch"
+                            android:hint="Destination"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/act_route_result_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DDDDDD"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="8dp"
+                    android:gravity="bottom"
+                    android:background="#F7F7F7"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:text="Results:"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DDDDDD"/>
+
+                <TextView
+                    android:id="@+id/act_route_no_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:text="No results found, maybe you can try other addresses."/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DDDDDD"/>
+
+                <ListView
+                    android:id="@+id/act_route_result_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="0.8dp"
+                    android:divider="#DDDDDD"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/act_route_ad_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_route_unit_id">
+
+    </com.google.android.gms.ads.AdView>
+
+
+</FrameLayout>

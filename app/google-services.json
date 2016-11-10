@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "50086132192",
+    "firebase_url": "https://go-map-149003.firebaseio.com",
+    "project_id": "go-map-149003",
+    "storage_bucket": "go-map-149003.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50086132192:android:77bd9601c215ea44",
+        "android_client_info": {
+          "package_name": "com.daodao.map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50086132192-olluu3f94n7i1jv15jk75n8t4urg990q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daodao.map",
+            "certificate_hash": "9A1028D55D5CD7589DAEDF80301A30EF78F2C893"
+          }
+        },
+        {
+          "client_id": "50086132192-62hntq049dt10i0r876bhvgp384t0sia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50086132192-62hntq049dt10i0r876bhvgp384t0sia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

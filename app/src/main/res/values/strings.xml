@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Go Map</string>
+    <string name="title_activity_maps">Go Map</string>
+
+    <!--   ca-app-pub-5709152643780891/4526278161    -->
+    <string name="banner_ad_map_unit_id">ca-app-pub-8949214993931766/5948229132</string>
+
+    <!--      ca-app-pub-5709152643780891/8956477768    -->
+    <string name="banner_ad_route_unit_id">ca-app-pub-8949214993931766/8901695538</string>
+
+    <string name="banner_ad_loading_unit_id">ca-app-pub-8949214993931766/7115407935</string>
+</resources>
